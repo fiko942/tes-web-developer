@@ -1,3 +1,12 @@
+* {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
 .header-image {
     width: 100vw;
     top: 0;
@@ -5,4 +14,39 @@
     max-width: 400px;
     display: flex;
     margin: auto;
+}
+
+.items {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.items .item {
+    padding: 10px 0;
+}
+
+.items .item:not(:first-child) {
+    border-top: 1px solid #000;
+}
+
+.items .item .title {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.items .item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.items .item .quote {
+    font-size: 12px;
+}
+
+.items .item .posted {
+    font-style: italic;
+    font-size: 9px;
 }
